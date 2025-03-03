@@ -14,8 +14,9 @@ See the "Prerequisites" documentation page for compatibility details.
 2. This package **publishes a `config/permission.php` file**. If you already have a file by that name, you must rename or remove it.
 
 3. You can **install the package via composer**:
-
-        composer require spatie/laravel-permission
+    ```
+    composer require spatie/laravel-permission
+    ```
 
 4. The Service Provider will automatically be registered; however, if you wish to manually register it, you can manually add the `Spatie\Permission\PermissionServiceProvider::class` service provider to the array in `bootstrap/providers.php` (`config/app.php` in Laravel 10 or older).
 
@@ -39,24 +40,24 @@ See the "Prerequisites" documentation page for compatibility details.
    - **If you are using CACHE_STORE=database**, be sure to [install Laravel's cache migration](https://laravel.com/docs/cache#prerequisites-database), else you will encounter cache errors.
 
 7. **Clear your config cache**. This package requires access to the `permission` config settings in order to run migrations. If you've been caching configurations locally, clear your config cache with either of these commands:
-
-        php artisan optimize:clear
-        # or
-        php artisan config:clear
+    ```
+    php artisan optimize:clear
+    # or
+    php artisan config:clear
+    ```
 
 8. **Run the migrations**: After the config and migration have been published and configured, you can create the tables for this package by running:
-
-        php artisan migrate
+    ```
+    php artisan migrate
+    ```
 
 9. **Add the necessary trait to your User model**: 
-
-        // The User model requires this trait
-        use HasRoles;
+    ```
+    // The User model requires this trait
+    use HasRoles;
+    ```
 
 10. Consult the **Basic Usage** section of the docs to get started using the features of this package.
-
-.
-
 
 ## Default config file contents
 
